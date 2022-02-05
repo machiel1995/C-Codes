@@ -1,2 +1,2 @@
-# C-Codes
-Sample codes for C++
+# c---codes
+ C++ codes examples

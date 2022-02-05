@@ -1,0 +1,78 @@
+//using loop
+#include<iostream>
+using namespace std;
+int main()
+{
+    int num, i, fact=1;
+    cout<<"Enter the Number: ";
+    cin>>num;
+    for(i=num; i>=1; i--)
+        fact = fact*i;
+    cout<<"\nFactorial = "<<fact;
+    cout<<endl;
+    return 0;
+}
+--------
+//using while loop
+#include<iostream>
+using namespace std;
+int main()
+{
+    int num, i, fact=1;
+    cout<<"Enter the Number: ";
+    cin>>num;
+    i=num;
+    while(i>=1)
+    {
+        fact = fact*i;
+        i--;
+    }
+    cout<<"\nFactorial = "<<fact;
+    cout<<endl;
+    return 0;
+} 
+
+---------
+//using user define function
+#include<iostream>
+using namespace std;
+int findFact(int);
+int main()
+{
+    int num, fact;
+    cout<<"Enter the Number: ";
+    cin>>num;
+    fact = findFact(num);
+    cout<<"\nFactorial = "<<fact;
+    cout<<endl;
+    return 0;
+}
+int findFact(int n)
+{
+    int i, f=1;
+    for(i=n; i>=1; i--)
+        f = f*i;
+    return f;
+}
+----------
+//using call by reference
+#include<iostream>
+using namespace std;
+void findFact(int, int *);
+int main()
+{
+    int num, fact=1;
+    cout<<"Enter the Number: ";
+    cin>>num;
+    findFact(num, &fact);
+    cout<<"\nFactorial = "<<fact;
+    cout<<endl;
+    return 0;
+}
+void findFact(int n, int *f)
+{
+    int i;
+    for(i=n; i>=1; i--)
+        *f = (*f)*i;
+}
+-------
